@@ -67,18 +67,19 @@ public class Main {
         }
     }
 
-    public static void getSearchPrice(){
+    public static void getSearchPrice() {
         System.out.println("max Price daxil et: ");
         int maxPrice = sc.nextInt();
         System.out.println("min Price daxil et: ");
         int minPrice = sc.nextInt();
 
-        for (Book book:books){
-            if (book.price>minPrice && book.price<maxPrice){
+        for (Book book : books) {
+            if (book != null && book.price > minPrice && book.price < maxPrice) {
                 System.out.println("daxil edilen min ve max arasinda olan Price: " + book.name + book.price);
             }
         }
     }
+
     public static void addBook() {
         System.out.print("Kitabin adini daxil edin: ");
         String bookName = sc.nextLine();
